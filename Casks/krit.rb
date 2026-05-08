@@ -1,24 +1,26 @@
 cask "krit" do
-  version "0.1.1-rc1"
+  version "0.1.1-rc2"
 
   on_macos do
     on_arm do
-      url "https://github.com/kaeawc/krit/releases/download/v0.1.1-rc1/krit_#{version}_darwin_arm64.tar.gz"
-      sha256 "0973d2e7e237a592152ae5eaee1c9994982fae1ea77f3f08f745e04d65c70712"
+      url "https://github.com/kaeawc/krit/releases/download/v0.1.1-rc2/krit_#{version}_darwin_arm64.tar.gz"
+      sha256 "f9b784c6532146918feaf56c4a035e78b6ff068016aee75a0a58e3295d129033"
     end
     on_intel do
-      url "https://github.com/kaeawc/krit/releases/download/v0.1.1-rc1/krit_#{version}_darwin_amd64.tar.gz"
-      sha256 "da2ef6d6b4f9bd33938063d8dc5cf884af5ae35921feb53b8da4be04acd542d4"
+      url "https://github.com/kaeawc/krit/releases/download/v0.1.1-rc2/krit_#{version}_darwin_amd64.tar.gz"
+      sha256 "a603c535aa23c13100198254b0f17094c2e9b149de77a032431abfbc1f075ebf"
     end
   end
 
   on_linux do
-    on_intel do
-      url "https://github.com/kaeawc/krit/releases/download/v0.1.1-rc1/krit_#{version}_linux_amd64.tar.gz"
-      sha256 "43267200ac9611b0c088d5ee97bb8e80fd3df1a66682c18857cd1e87a5d30dc1"
+    on_arm do
+      url "https://github.com/kaeawc/krit/releases/download/v0.1.1-rc2/krit_#{version}_linux_arm64.tar.gz"
+      sha256 "5ada5880340b202c48ddce4ec64bcd35f7f168ba547b28a256d34701b446bd48"
     end
-    # Linux arm64 archive is a follow-up; the cross-toolchain on
-    # ubuntu-24.04 needs sysroot fixes to build cgo cleanly.
+    on_intel do
+      url "https://github.com/kaeawc/krit/releases/download/v0.1.1-rc2/krit_#{version}_linux_amd64.tar.gz"
+      sha256 "a2ba60d4f662348ee2693927538f4c010daea3d10cd90954a238e4c576215e35"
+    end
   end
 
   name "krit"
