@@ -4,18 +4,18 @@ cask "krit" do
   on_macos do
     on_arm do
       url "https://github.com/kaeawc/krit/releases/download/v0.1.1-rc1/krit_#{version}_darwin_arm64.tar.gz"
-      sha256 "88a4c93e7892bc29004d847a580f72e9f8f6da8768adff330719f36c64dc17be"
+      sha256 "0973d2e7e237a592152ae5eaee1c9994982fae1ea77f3f08f745e04d65c70712"
     end
     on_intel do
       url "https://github.com/kaeawc/krit/releases/download/v0.1.1-rc1/krit_#{version}_darwin_amd64.tar.gz"
-      sha256 "4b6cf4d006989259a0bf0ab9b5df5a500a1fe7e0453b800a00a109613f4e8816"
+      sha256 "da2ef6d6b4f9bd33938063d8dc5cf884af5ae35921feb53b8da4be04acd542d4"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/kaeawc/krit/releases/download/v0.1.1-rc1/krit_#{version}_linux_amd64.tar.gz"
-      sha256 "a97f768980875d1e8853fa993d7d9baf73fc8815417ed22561c122dbdf7a32d1"
+      sha256 "43267200ac9611b0c088d5ee97bb8e80fd3df1a66682c18857cd1e87a5d30dc1"
     end
     # Linux arm64 archive is a follow-up; the cross-toolchain on
     # ubuntu-24.04 needs sysroot fixes to build cgo cleanly.
