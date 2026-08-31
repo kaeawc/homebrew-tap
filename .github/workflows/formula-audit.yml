@@ -1,0 +1,49 @@
+# Lints, audits, installs, and tests each formula on every change so a bad
+# auto-generated formula is caught here in the tap instead of on a user's
+# machine. The auto-mobile formula is regenerated on every upstream release by
+# kaeawc/auto-mobile's release workflow; this gate runs when that push lands.
+name: Formula audit
+
+on:
+  push:
+    branches: [main]
+    paths: ["Formula/**"]
+  pull_request:
+    paths: ["Formula/**"]
+  workflow_dispatch:
+
+# Latest release re-pushes the formula; only the newest audit matters.
+concurrency:
+  group: formula-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - name: Check out tap
+        uses: actions/checkout@v4
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Point a tap at this checkout
+        run: |
+          set -euo pipefail
+          brew tap-new kaeawc/tap --no-git || true
+          tap_dir="$(brew --repository kaeawc/tap)"
+          rm -rf "$tap_dir"
+          ln -s "$GITHUB_WORKSPACE" "$tap_dir"
+
+      - name: brew style
+        run: brew style kaeawc/tap
+
+      - name: brew audit
+        run: brew audit --strict --online --formula kaeawc/tap/auto-mobile
+
+      - name: brew install + test
+        run: |
+          set -euo pipefail
+          brew install --formula kaeawc/tap/auto-mobile
+          brew test kaeawc/tap/auto-mobile
+          auto-mobile --version
