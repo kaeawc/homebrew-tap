@@ -1,8 +1,8 @@
 class AutoMobile < Formula
   desc "Mobile device interaction automation via MCP"
   homepage "https://github.com/kaeawc/auto-mobile"
-  url "https://registry.npmjs.org/@kaeawc/auto-mobile/-/auto-mobile-0.0.90.tgz"
-  sha256 "4e47af9afed0b1f8aa836b8076bdb074846754f97e5fdca265ee0173ed92f688"
+  url "https://registry.npmjs.org/@kaeawc/auto-mobile/-/auto-mobile-0.0.91.tgz"
+  sha256 "41f7ac5f38d700338dce749daa707fc6b1b6c2bf8908ce2002c86870dd39bad4"
   license "Apache-2.0"
 
   # Track new releases from the npm registry's dist-tags. `brew livecheck`
