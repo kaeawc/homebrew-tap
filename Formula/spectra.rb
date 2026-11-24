@@ -5,23 +5,23 @@ class Spectra < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/kaeawc/spectra/releases/download/v0.1.2/spectra_v0.1.2_darwin_arm64.tar.gz"
-      sha256 "9a4a6bc2457b665a7af52c61a1a4d2674718024e24cb227063270cf3ac76a9c9"
+      url "https://github.com/kaeawc/spectra/releases/download/v0.1.3/spectra_v0.1.3_darwin_arm64.tar.gz"
+      sha256 "76010d91bbbba382bb9569b89bfd775fe0b4db73c348cbc6f8f9aabb8dc5e8f7"
     end
     on_intel do
-      url "https://github.com/kaeawc/spectra/releases/download/v0.1.2/spectra_v0.1.2_darwin_amd64.tar.gz"
-      sha256 "5500147f5150c7dbcbe821a43c6b672e4c7e32e8a8b2c82598a5f1c6c5a56007"
+      url "https://github.com/kaeawc/spectra/releases/download/v0.1.3/spectra_v0.1.3_darwin_amd64.tar.gz"
+      sha256 "67f105759218c4621ebfb6f8fac1b6b1bb6db4b750a9a50fccb87dd6ee94ac12"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/kaeawc/spectra/releases/download/v0.1.2/spectra_v0.1.2_linux_arm64.tar.gz"
-      sha256 "be6483765b992775153961f12af023b8314be4f2f50fad17ec72d87a21c591cf"
+      url "https://github.com/kaeawc/spectra/releases/download/v0.1.3/spectra_v0.1.3_linux_arm64.tar.gz"
+      sha256 "2b6ffb63fe8f945a10969c56aa2ef188c5e0c595af1f4b1054535e3f01997964"
     end
     on_intel do
-      url "https://github.com/kaeawc/spectra/releases/download/v0.1.2/spectra_v0.1.2_linux_amd64.tar.gz"
-      sha256 "981751e901c8207aa4a58b49316d20b9bc2f4ceae47c032813efc692baf8f709"
+      url "https://github.com/kaeawc/spectra/releases/download/v0.1.3/spectra_v0.1.3_linux_amd64.tar.gz"
+      sha256 "c90aa774e11c848c9afeb902e08856080d5b02d5563dc82a33cc6a8e57f5229a"
     end
   end
 
