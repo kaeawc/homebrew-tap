@@ -7,9 +7,9 @@ name: Formula audit
 on:
   push:
     branches: [main]
-    paths: ["Formula/**"]
+    paths: ["Formula/**", "Casks/**", ".github/workflows/formula-audit.yml"]
   pull_request:
-    paths: ["Formula/**"]
+    paths: ["Formula/**", "Casks/**", ".github/workflows/formula-audit.yml"]
   workflow_dispatch:
 
 # Latest release re-pushes the formula; only the newest audit matters.
@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Homebrew
-        uses: Homebrew/actions/setup-homebrew@master
+        uses: Homebrew/actions/setup-homebrew@main
 
       - name: Point a tap at this checkout
         run: |
