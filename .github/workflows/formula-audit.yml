@@ -39,7 +39,7 @@ jobs:
         run: brew style kaeawc/tap
 
       - name: brew audit
-        run: brew audit --strict --online --formula kaeawc/tap/auto-mobile
+        run: brew audit --strict --online --formula kaeawc/tap/auto-mobile kaeawc/tap/spectra
 
       - name: brew install + test
         run: |
@@ -47,3 +47,10 @@ jobs:
           brew install --formula kaeawc/tap/auto-mobile
           brew test kaeawc/tap/auto-mobile
           auto-mobile --version
+
+      - name: brew install + test (spectra)
+        run: |
+          set -euo pipefail
+          brew install --formula kaeawc/tap/spectra
+          brew test kaeawc/tap/spectra
+          spectra version
