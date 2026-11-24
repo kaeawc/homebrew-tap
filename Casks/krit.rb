@@ -1,24 +1,24 @@
 cask "krit" do
-  version "0.2.0"
+  version "0.4.0"
 
   on_macos do
     on_arm do
-      sha256 "00e2170d07aa0aa53fce0dd8a4cc9a8a4f93b0f7858b38fb2bd2d8158c1b8151"
-      url "https://github.com/kaeawc/krit/releases/download/v0.2.0/krit_#{version}_darwin_arm64.tar.gz"
+      sha256 "0f34caa35c36a2d188e65d7138bf6fedae272dc414b825835ae924744d8b8cef"
+      url "https://github.com/kaeawc/krit/releases/download/v0.4.0/krit_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "8c80fdbdd8267fc800e082bd58ef16362e375c861496a1579e48d22b430fb096"
-      url "https://github.com/kaeawc/krit/releases/download/v0.2.0/krit_#{version}_darwin_amd64.tar.gz"
+      sha256 "40407614695e9c01176cb4f7006a583d824c489ebe1b8a7eeef68c75a8aed44e"
+      url "https://github.com/kaeawc/krit/releases/download/v0.4.0/krit_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "3006918a2da8f4e1c6cfe032d2688f138748cc6d0a7497686dfa9a3ad58a1f12"
-      url "https://github.com/kaeawc/krit/releases/download/v0.2.0/krit_#{version}_linux_arm64.tar.gz"
+      sha256 "843849a0f1aca85279b40cc6020eb7d9fc1302f2585e5da5050b597edffa59b1"
+      url "https://github.com/kaeawc/krit/releases/download/v0.4.0/krit_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "ccb39239e547e4141db7f73ec434f09cc3a9b99ed23a3779f586c05d5680408d"
-      url "https://github.com/kaeawc/krit/releases/download/v0.2.0/krit_#{version}_linux_amd64.tar.gz"
+      sha256 "4720196534b41a41a211103382289eeff1cabbd65522d6055fb81fe9d42944a7"
+      url "https://github.com/kaeawc/krit/releases/download/v0.4.0/krit_#{version}_linux_amd64.tar.gz"
     end
   end
 
